@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+* {
+   margin: 0;
+   padding: 0;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  overflow-x: hidden;
+  height:100%;
+  width:100%;
+  background-color:#26265B;
+  font-size:20px;
+}
+/* Video Container */
+.video-container {
+  width: 100%; /* Full width of the page */
+  height: 100vh; /* Fixed height for scrolling effect */
+   /* Ensure no extra parts of the video appear */
+  position:relative;
+ padding-bottom:0px;
+}
+
+.video-container video {
+    position:absolute;
+
+   object-fit: fill;
+   padding-bottom:0px;
+   min-width: 100%;
+    min-height: 100%; 
+    z-index:0;
+}
+.greet{
+    position:relative;
+    
+}
+#a,#b,#c{
+    position:absolute;
+z-index:1;
+left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:50px;
+  margin-top: 130px; 
+}
+
+.s{
+    position:absolute;
+z-index:1;
+
+text-align:center;
+margin-top:250px;
+ background-color:bisque;
+ padding:3px;
+ border-radius:20px;
+
+}
+.ez{
+    font-size: 10px;
+    position:absolute;
+z-index:1;
+
+text-align:center;
+margin-top:400px;
+ 
+ padding:3px;
+ border-radius:20px;
+}
+h2{background: #780206;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius:50px;
+padding:3px;
+color:white;
+padding-right:5px;
+padding-left:5px;
+padding-top:5px;
+padding-bottom:5px;
+}
+.w{
+    display:flex;
+    justify-content: center;
+  align-items: center;
+}
+h1{background: #70e1f5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius:50px;
+padding-right:5px;
+padding-left:5px;
+padding-top:5px;
+padding-bottom:5px;
+text-align:center;
+width:fit-content;
+}
+
+.see{
+
+    position:absolute;
+    top:400px;
+    
+  margin-left:20px;
+  z-index:2;
+}
+.as{
+    position:relative;
+    left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%);
+}
+    </style>
+</head>
+<body>
+    <div class="greet">
+<video width=200px; height=200px; id="a" src="morgen.mp4" hidden autoplay></video>
+<video width=200px; height=200px; id="c" src="abend.mp4" hidden autoplay></video>
+<video width=200px; height=200px; id="b" src="nach.mp4" hidden autoplay></video> </div>
+
+<div class="greet">
+<p class="s">Guten morgen Sofia! 
+    <br>Wähle bitte unten was du heute machen willst... </p></div>
+   <div class="as">
+    <div class="see">
+        <h1 class="" style=" font-family: Garamond;font-size:30px;";>Lernen</h1>
+        <br>
+        
+        <h2 class="" style="font-size:15px; display:inline;">Mathe Lektionen</h2>
+        <br>
+        <br>
+        <h2 class="" style="font-size:15px;display:inline;">Deutsch Lektionen</h2>
+        <br>
+        <br>
+        <h2 class="" style="font-size:15px;display:inline;">Vokabel Liste</h2>
+        <br>
+        <br>
+        <h1 class="" style="font-family: Garamond; font-size:30px;";>Quiz</h1>
+        <br>
+        
+        <h2 class=""style="font-size:15px;display:inline;">Mathe Wort-Fragen</h2>
+        <br>
+        <br>
+        <h2 class=""style="font-size:15px;display:inline;">Mathe Rechnungen</h2>
+        <br>
+        <br>
+        <h2 class=""style="font-size:15px;display:inline;">Zufallsvokabeln</h2>
+        <br>
+        <br>
+        <h2 class=""style="font-size:15px;display:inline;">Deutsch Grammatik</h2>
+   </div></div>
+    <div class="video-background">
+        <video  autoplay muted loop>
+          <source src="Back.mp4" type="video/mp4">
+          
+        </video>
+      </div>
+      <script>
+ const currentHour = new Date().getHours();
+ vid1=document.getElementById("a");
+ vid2=document.getElementById("b");
+ vid3=document.getElementById("c");
+
+
+if(currentHour<12){
+a=document.getElementById("a").style.display="flex";
+b=document.getElementById("b").style.display="none";
+c=document.getElementById("c").style.display="none";
+vid1.play()
+vid1.muted = true;
+}
+else if(currentHour>=12 && currentHour<18){
+    b=document.getElementById("b").style.display="flex";
+    c=document.getElementById("c").style.display="none";
+    a=document.getElementById("a").style.display="none";
+    vid2.play();
+    vid2.muted = true;
+}
+else if(currentHour>=18){
+    b=document.getElementById("b").style.display="none";
+    c=document.getElementById("c").style.display="flex";
+    a=document.getElementById("a").style.display="none";
+    vid3.play();
+    vid3.muted = true;
+}
+      </script>
+</body>
+</html>
