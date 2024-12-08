@@ -123,9 +123,8 @@ width:fit-content;
 </head>
 <body>
     <div class="greet">
-<video width=200px; height=200px; id="a" src="morgen.mp4" hidden autoplay></video>
-<video width=200px; height=200px; id="c" src="abend.mp4" hidden autoplay></video>
-<video width=200px; height=200px; id="b" src="nach.mp4" hidden autoplay></video> </div>
+<video width=200px; height=200px; id="a" src="morgen.mp4" muted autoplay></video>
+ </div>
 
 <div class="greet">
 <p class="s">Guten Tag! 
@@ -167,31 +166,14 @@ width:fit-content;
       </div>
       <script>
  const currentHour = new Date().getHours();
- vid1=document.getElementById("a");
- vid2=document.getElementById("b");
- vid3=document.getElementById("c");
+
 
 
 if(currentHour<12){
-a=document.getElementById("a").style.display="flex";
-b=document.getElementById("b").style.display="none";
-c=document.getElementById("c").style.display="none";
-vid1.play()
-vid1.muted = true;
 }
 else if(currentHour>=12 && currentHour<18){
-    b=document.getElementById("b").style.display="flex";
-    c=document.getElementById("c").style.display="none";
-    a=document.getElementById("a").style.display="none";
-    vid2.play();
-    vid2.muted = true;
 }
 else if(currentHour>=18){
-    b=document.getElementById("b").style.display="none";
-    c=document.getElementById("c").style.display="flex";
-    a=document.getElementById("a").style.display="none";
-    vid3.play();
-    vid3.muted = true;
 }
       </script>
 </body>
