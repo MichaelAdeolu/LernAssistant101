@@ -127,7 +127,7 @@ width:fit-content;
  </div>
 
 <div class="greet">
-<p class="s">Guten Tag Sofia! 
+<p class="s" id="ed" >Guten Tag Sofia! 
     <br>Wähle bitte unten was du heute machen willst... </p></div>
    <div class="as">
     <div class="see">
@@ -166,7 +166,7 @@ width:fit-content;
       </div>
       <script>
  const currentHour = new Date().getHours();
- greet=document.getElementsByTagName("p");
+ var greet=document.getElementById("ed");
 
 
 if(currentHour<12){
