@@ -445,7 +445,10 @@ h1 {
       text-decoration:none;
  margin-left:10px;
     }
-    
+     .table-container {
+            height: 100vh; /* Full viewport height */
+            overflow: auto; /* Enable scrolling if content overflows */
+        }
         table {
             border-collapse: collapse;
            
@@ -475,7 +478,7 @@ h1 {
   <br>
   <br>
   
- 
+ <div class="table-container">
     <table>
         <thead>
             <tr>
@@ -520,7 +523,7 @@ h1 {
             <tr><td>33</td><td>Abenteuer</td><td>Adventure</td></tr>
             <tr><td>34</td><td>Ort</td><td>Place</td></tr>
         </tbody>
-    </table>
+    </table></div>
   <!--
 Foil Stamping Effect
 https://codepen.io/wakana-k/pen/BavmMoO
