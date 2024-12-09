@@ -31,7 +31,7 @@ h1{
   text-shadow: 10px 0px 20px  white;
   line-height: var(--line-height) ;
 }
-h1, #begin, img{
+h1, .begin, img{
   color:#151DD2;
   font-family:inria serif;
   font-size: 60px;
@@ -47,7 +47,7 @@ h1, #begin, img{
    z-index:2;
 }
 
-#begin{
+.begin{
   color:white;
   background: linear-gradient(to bottom, #5F72D9, #151DD2);
   box-shadow: 0px 0px 20px blue;
@@ -75,7 +75,7 @@ h1, #begin, img{
 
 
 /* Scale the element when hovered */
-#begin:hover {
+.begin:hover {
     color: blue;
    background: linear-gradient(to bottom, #f7f7f8, #151DD2);
   cursor:pointer;
@@ -598,7 +598,7 @@ width:500px;
     
  
     
-    <p id="begin" onclick="toggleVisibility('panel1')" >Begin</p>
+    <p class="begin" onclick="toggleVisibility('panel1')" >Letzte</p><p class="begin" onclick="toggleVisibility('panel1')" >Nächste</p>
 
 
     
