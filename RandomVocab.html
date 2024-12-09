@@ -66,13 +66,16 @@ h1, .begin, img{
   font-weight:lighter;
   position:absolute;
   
-  top: 70%;
+  
    /* Remove default margin */
   left:20%;
   z-index:3;
    
   
 }
+  .free{
+    top:70%;
+  }
 .next{
   color:black;
   background: white;
@@ -89,7 +92,7 @@ h1, .begin, img{
   font-weight:lighter;
   position:absolute;
   
-  top: 63%;
+  
    /* Remove default margin */
   z-index:3;
 right:10%;
@@ -622,7 +625,7 @@ width:500px;
     
  
     
-    <p class="begin" onclick="toggleVisibility('panel1')" >Letzte</p><p class="next" onclick="toggleVisibility('panel1')" >Nächste</p>
+   <div class="free"> <p class="begin" style="display:inline;onclick="toggleVisibility('panel1')" >Letzte</p><p class="next" display:inline; onclick="toggleVisibility('panel1')" >Nächste</p></div>
 
 
     
