@@ -691,10 +691,9 @@ width:500px;
   <script>
 // Get the viewport height
 (function load(){
-  document.getElementById("panel1").classList.add("hidden");
-  document.getElementById("panel2").classList.add("hidden");
+ 
     
-})();
+
 
 var inc=1;
 num3=0;
@@ -702,41 +701,26 @@ num3=0;
 backup1=[];
         backup2=[];
 
-function toggleVisibility(elementId) {
-    var element = document.getElementById(elementId);
-    if (element.classList.contains('hidden')) {
-        element.classList.remove('hidden');
-        element.classList.add('visible');
-      document.querySelectorAll('#begin, img, h1').forEach(element => {
-            element.classList.add('hidden');
-        });
 
 
 
-      
-    } else {
-        element.classList.remove('visible');
-        element.classList.add('hidden');
-    }
-}
 
 
-function toggleVisibility2(elementId) {
-  input= document.querySelectorAll('input');   
+  input2= "Menschlich, Besitzer, Albtraum, Mürrisch, Süßeste, Nachbarschaft, -schaft, Genießen, Nickerchen, Schrecklich, Treibt sport, Hof, Zusehen, Abschnitt, Buch, Titel, Autor, Illustrator, Verlag, Erscheinungsjahr, Kapitel, Seitenzahl, Genre, Thema, Handlung, Hauptfigur, Nebenfigur, Zeit, Ereignis, Höhepunkt, Lösung, Konflikt, Abenteuer, Ort, Charakter, Eigenschaft, Persönlichkeit, Freundschaft, Familie, Gegenspieler, Held, Schurke, Verhalten, Entwicklung";   
+    input1="Human, Owner, Nightmare, Grumpy, Cutest or Sweetest, Neighborhood, -hood, to Enjoy, Nap, Terrible, Do Sports, Compound or Yard, Watch, Paragraph, Book, Title, Author, Illustrator, Publisher, Year of publication, Chapter, Number of pages, Genre, Theme, Plot, Main character, Supporting character, Time, Event, Climax, Solution, Conflict, Adventure, Place,Character, Trait, Personality, Friendship, Family, Antagonist, Hero, Villain, Behavior, Development"
     
-    
-   if(input[0].value!=='' && input[1].value!==''){
+   
         firstVals=[];
          secondVals=[];
 
       
-                  firstWords=input[0].value;
+                  firstWords=input1.value;
                   firstSplit= firstWords.replaceAll('"', '');
                  firstOnes=firstSplit.split(","); 
 
            //next processess are, a toggle for the see translation button.
 
-              secondWords=input[1].value;
+              secondWords=input2.value;
                   secondSplit= secondWords.replaceAll('"', '');
                    secondOnes=secondSplit.split(","); 
 
@@ -767,10 +751,7 @@ inc=1;
        secondOnes.splice(`${pos}`, 1);
 num1--;
        }}
-        else{
-                       alert("Please, recheck your submission.");
-                    return;
-                   }
+       
 
           
 
@@ -801,19 +782,12 @@ num1--;
          
 
      } 
-       else{
-          alert("Please, recheck your submission.");
+      arrow(); 
+     })();
+   
 
-           }
-     
-   }  
 
-    else{
-   alert("Please, recheck your submission.");
 
-    }
-arrow();
-} 
 
 
   
@@ -918,5 +892,6 @@ function arrow2(){
     
 }
 </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>
