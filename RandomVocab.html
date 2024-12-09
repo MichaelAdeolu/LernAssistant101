@@ -76,6 +76,9 @@ h1, .begin, img{
   .free{
     top:70%;
      position:relative;
+     display: flex; /* Enable Flexbox */
+            justify-content: space-between; /* Add space between items */
+            align-items: center; 
   }
 .next{
   color:black;
@@ -627,12 +630,8 @@ width:500px;
  
     
    <div class="free">
-     <p class="begin" style="display:flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */">Letzte</p>
-     <p class="next" style="display:flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */">Nächste</p>
+     <p class="begin">Letzte</p>
+     <p class="next">Nächste</p>
    </div>
 
 
