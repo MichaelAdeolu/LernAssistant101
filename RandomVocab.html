@@ -679,15 +679,15 @@ width:500px;
     
 
       
-       <p id="see" style="text-align:center; font-size:15px;  color:black;"  onclick="showTranslation();">See translation</p>
-       <p style="text-align:center; color:black; font-size:20px;color:black;" id="tr" >Translation</p>
+       <p id="see" style="text-align:center; font-size:15px;  color:black;"  onclick="showTranslation()">See translation</p>
+       <p style="text-align:center; color:black; font-size:20px;color:black;" class="hidden" id="tr" >Translation</p>
       <br>
       <br>
        
 
     </div>
 
-  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
 // Get the viewport height
 
@@ -803,7 +803,7 @@ num1--;
      
 
    
-arrow();
+
  
   td=document.getElementsBClassName("begin").addEventListener("click", () => {
         // Check if the left arrow key (key code 37) is pressed
@@ -872,6 +872,6 @@ function showTranslation() {
 
 
 </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ 
 </body>
 </html>
