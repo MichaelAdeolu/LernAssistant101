@@ -708,43 +708,31 @@ width:500px;
  
    // Get the viewport height
 (function load(){
-  document.getElementById("panel1").classList.add("hidden");
-  document.getElementById("panel2").classList.add("hidden");
+ 
     
 
 
 var inc=1;
 num3=0;
 
-backup1=[];
-        backup2=[];
 
 
-    var element = document.getElementById(elementId);
-    if (element.classList.contains('hidden')) {
-        element.classList.remove('hidden');
-        element.classList.add('visible');
-      document.querySelectorAll('#begin, img, h1').forEach(element => {
-            element.classList.add('hidden');
-        });
+  
 
 
 
       
-    } else {
-        element.classList.remove('visible');
-        element.classList.add('hidden');
-    }
+    
 
 
 
-function toggleVisibility2(elementId) {
+
   input2= "Menschlich, Besitzer, Albtraum, Mürrisch, Süßeste, Nachbarschaft, -schaft, Genießen, Nickerchen, Schrecklich, Treibt sport, Hof, Zusehen, Abschnitt, Buch, Titel, Autor, Illustrator, Verlag, Erscheinungsjahr, Kapitel, Seitenzahl, Genre, Thema, Handlung, Hauptfigur, Nebenfigur, Zeit, Ereignis, Höhepunkt, Lösung, Konflikt, Abenteuer, Ort, Charakter, Eigenschaft, Persönlichkeit, Freundschaft, Familie, Gegenspieler, Held, Schurke, Verhalten, Entwicklung";   
     input1="Human, Owner, Nightmare, Grumpy, Cutest or Sweetest, Neighborhood, -hood, to Enjoy, Nap, Terrible, Do Sports, Compound or Yard, Watch, Paragraph, Book, Title, Author, Illustrator, Publisher, Year of publication, Chapter, Number of pages, Genre, Theme, Plot, Main character, Supporting character, Time, Event, Climax, Solution, Conflict, Adventure, Place,Character, Trait, Personality, Friendship, Family, Antagonist, Hero, Villain, Behavior, Development"
        
     
     
-   if(input1!=='' && input2.!==''){
+   
         firstVals=[];
          secondVals=[];
 
@@ -776,7 +764,7 @@ inc=1;
                   
                  
                    
-        if (firstOnes.length==secondOnes.length) {
+     
        //pre defined randoms. Thats the main idea. 
             while (num1 > 0) {
                pos= Math.floor(Math.random() * (num1));
@@ -785,11 +773,8 @@ inc=1;
            firstOnes.splice(`${pos}`, 1);
        secondOnes.splice(`${pos}`, 1);
 num1--;
-       }}
-        else{
-                       alert("Please, recheck your submission.");
-                    return;
-                   }
+       }
+        
 
           
 
@@ -800,39 +785,26 @@ num1--;
                   document.getElementById("number").textContent=`${inc} of ${num3} words` ;
                   document.getElementById("random").textContent=`${firstVals[0]}`;
                   document.getElementById("tr").textContent=`${secondVals[0]}`;
-     var element = document.getElementById(elementId);
+    
 
-     if (element.classList.contains('hidden') && firstVals.length==secondVals.length) {
-         element.classList.remove('hidden'); 
-      element.classList.add('visible');
-         document.getElementById("tr").classList.add('hidden');
-       document.querySelectorAll('#panel1').forEach(element => {
-             element.classList.add('hidden');
-//what is different about this code now
-         }
+   
                                                    
                                                     
-                                                   );
+                                                   
 
  
 
 
          
 
-     } 
-       else{
-          alert("Please, recheck your submission.");
-
-           }
      
-   }  
+      
+     
+     
 
-    else{
-   alert("Please, recheck your submission.");
-
-    }
+   
 arrow();
-} 
+ 
   td=document.getElementsBClassName("begin").addEventListener("click", () => {
         // Check if the left arrow key (key code 37) is pressed
 
@@ -874,8 +846,7 @@ arrow();
 
 
     
-});
-})();
+});})();
 
   
 function showTranslation() {
