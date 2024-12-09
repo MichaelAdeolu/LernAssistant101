@@ -13,8 +13,13 @@
 --line-height:70px;
   
 }
-
+.male{
+transform: scale(0.6); /* Scale down to 80% */
+            transform-origin: center;
+  
+}
 html {
+  overflow:auto;
   height: 100%;
   width: 100%;
 }
@@ -211,13 +216,13 @@ width:500px;
 </head>
 
 <body>
-  <div>
+  <div class="male">
     
   <h1>RANDOM<br> VOCABULARY<br> GENERATOR<br></h1>
     <img height="50px" width="auto" src="down.ico">
     <p id="begin" onclick="toggleVisibility('panel1')" >Begin</p>
   <video autoplay loop playsinline muted>
-      <source src="video.mp4" type="video/mp4">
+      <source src="Back.mp4" type="video/mp4">
   </video>
 
     
@@ -498,6 +503,7 @@ function arrow2(){
     
 }
  </script>
+</div>
 </body>
 
 </html>
