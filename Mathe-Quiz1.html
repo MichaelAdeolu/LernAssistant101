@@ -61,6 +61,13 @@ h1 {
   text-align:center;
   
 }
+    .hidden{
+      visibility:hidden;
+    }
+    .visible{
+
+      visibility:visible;
+    }
 .emoji {
   margin: 0.3em 0;
   font-family: sans-serif;
@@ -467,18 +474,18 @@ padding:3px;
    <br>
 <li> <p> Are decimals and fractions the same number, for example, is 1/2 the same as 0.5?</p>
  </li> <br><li><p> What do you call the line between the two numbers in a Bruch Zahl?</p>
- </li><br> <li></li><p> What is the number below in a bruchzahl?</p></li></ol>
+ </li><br> <li><p> What is the number below in a bruchzahl?</p></li></ol>
   <br>
   <br>
   <h2>Lösungen</h2>
-    <ol>
+    <ol class="hidden">
 <li><p>63.5 </p></li>
   <br>
 <li><p> Der Zähler</p></li>
    <br>
 <li> <p> Ja</p>
  </li> <br><li><p> Der Bruchstich</p>
- </li><br> <li></li><p> Der Nenner</p></li></ol>
+ </li><br> <li><p> Der Nenner</p></li></ol>
 
 
     <br>
@@ -527,5 +534,15 @@ Copyright (c) 2023 by Wakana Y.K.
   <div><span></span></div>
   <div><span></span></div>
 </div>
+  <script>
+    h2=document.getElementsByTagName("h2").addEventListener("click", function() {
+            // Select the output element
+            const output = document.getElementsByClassName("hidden");
+            // Update the content of the output paragraph
+            output.classList.remove("hidden");
+      output.classList.add("visible");
+        });;
+    
+  </script>
 </body>
 </html>
