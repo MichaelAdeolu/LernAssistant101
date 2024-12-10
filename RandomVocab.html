@@ -241,6 +241,10 @@ width:500px;
      <p>Write in the second language's comma separated array of words:</p>
      <input  type="text" style="width: 400px; height: 40px; font-size:25px; font-weight:lighter;" placeholder="Native or second words...">
      <br>
+     <button id="copyButton1">Copy Text</button>
+<p id="textToCopy1">Menschlich, Besitzer, Albtraum, Mürrisch, Süßeste, Nachbarschaft, -schaft, Genießen, Nickerchen, Schrecklich, Treibt sport, Hof, Zusehen, Abschnitt, Buch, Titel, Autor, Illustrator, Verlag, Erscheinungsjahr, Kapitel, Seitenzahl, Genre, Thema, Handlung, Hauptfigur, Nebenfigur, Zeit, Ereignis, Höhepunkt, Lösung, Konflikt, Abenteuer, Ort, Charakter, Eigenschaft, Persönlichkeit, Freundschaft, Familie, Gegenspieler, Held, Schurke(oder Bösewicht), Verhalten, Entwicklung</p>
+     <button id="copyButton2">Copy Text</button>
+<p id="textToCopy2">Human, Owner, Nightmare, Grumpy, Cutest, Neighborhood, -hood, to Enjoy, Nap, Terrible, Do Sports, Compound/Yard, Watch, Paragraph, Book, Title, Author, Illustrator, Publisher, Year of publication, Chapter, Number of pages, Genre, Theme, Plot, Main character, Supporting character, Time, Event, Climax, Solution, Conflict, Adventure, Place, Character, Trait, Personality, Friendship, Family, Antagonist, Hero, Villain, Behavior, Development.</p>
       <br>
       
     
@@ -278,6 +282,33 @@ width:500px;
   </div>
   
  <script>
+    document.getElementById("copyButton1").addEventListener("click", function() {
+            // Get the text content
+            const text = document.getElementById("textToCopy1").textContent;
+
+            // Use navigator.clipboard API to copy
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    alert("Text copied to clipboard!");
+                })
+                .catch(err => {
+                    console.error("Failed to copy text: ", err);
+                });
+        });
+
+    document.getElementById("copyButton2").addEventListener("click", function() {
+            // Get the text content
+            const text = document.getElementById("textToCopy2").textContent;
+
+            // Use navigator.clipboard API to copy
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    alert("Text copied to clipboard!");
+                })
+                .catch(err => {
+                    console.error("Failed to copy text: ", err);
+                });
+        });
   // Get the viewport height
 (function load(){
   document.getElementById("panel1").classList.add("hidden");
